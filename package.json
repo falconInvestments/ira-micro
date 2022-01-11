@@ -1,0 +1,19 @@
+{
+  "name": "ira-micro",
+  "version": "2.0.0",
+  "description": "A DB setup with sequelize for IRA accounts microservice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "James Morical",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.12.5",
+    "sequelize-cli": "^6.3.0"
+  }
+}
