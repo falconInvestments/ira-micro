@@ -1,27 +1,30 @@
+
 module.exports = (sequelize, DataTypes) => {
-    const Account = sequelize.define('account', {
+
+    const Investment = sequelize.define('investment', {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             allowNull: false,
             primaryKey: true
         },
-        label: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        balance: {
-            type: DataTypes.INTEGER,
+        symbol: {
+            type: DataTypes.STRING,
             allowNull: false
         },
-        annualContribution: {
-            type: DataTypes.INTEGER,
+        type: {
+            type: DataTypes.STRING,
             allowNull: false
         },
-        userId: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        }
+        accountId: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }, 
     })
-    return Account
+
+    return Investment
 }
