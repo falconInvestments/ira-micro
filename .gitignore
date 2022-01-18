@@ -1,4 +1,7 @@
 /node_modules
 npm-debug.log
 .DS_Store
+.Dockerignore
+Dockerfile
+dbConfig.js
 /*.env

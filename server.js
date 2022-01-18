@@ -1,7 +1,7 @@
 const express = require('express')
 
 const app = express()
-const port = 3000
+const port = 5280
 app.use(express.json())
 
 const routers = require('./routes/userRouter.js')
