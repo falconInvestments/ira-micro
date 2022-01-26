@@ -12,13 +12,15 @@ const addUser = async (req,res) => {
     res.status(200).send(user)
 }
 const getAllUsers = async (req, res) => {
-
+try {
     let users = await User.findAll({
         include: db.Accounts
     });
     res.status(200).send(users)
+} catch (error) {
+    console.log(error)
 }
-
+}
 const getOneUser = async (req, res) => {
     
     let id = req.params.id
