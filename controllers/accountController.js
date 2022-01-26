@@ -16,7 +16,7 @@ const addAccount = async (req, res) => {
 
 const getAllAccounts = async (req, res) => {
 
-    let accounts = await Account.findAll({})
+    let accounts = await Account.findAll({include: db.Investments})
     res.status(200).send(accounts)
 }
 
@@ -24,7 +24,7 @@ const getOneAccount = async (req, res) => {
     
     let id = req.params.id
 
-    let accounts = await Account.findOne({where: {id: id}})
+    let accounts = await Account.findOne({where: {id: id}, include: db.Investments})
     res.status(200).send(accounts)
 }
 

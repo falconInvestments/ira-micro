@@ -16,6 +16,14 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         }, 
+        age: {
+            type: DataTypes.NUMBER,
+            allowNull: false
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
     })
 
     return User

@@ -10,6 +10,8 @@ const routers = require('./routes/userRouter.js')
 app.use('/users', routers)
 const accountRouter = require('./routes/accountRouter.js')
 app.use('/accounts', accountRouter)
+const investmentRouter = require('./routes/investmentRouter.js')
+app.use('/investments', investmentRouter)
 
 
 app.get('/', (req, res) => {

@@ -4,7 +4,9 @@ const User = db.Users
 const addUser = async (req,res) => {
     let input_data = {
         name: req.body.name,
-        email: req.body.email
+        email: req.body.email,
+        age: req.body.age,
+        password: req.body.password
     }
     const user = await User.create(input_data)
     res.status(200).send(user)

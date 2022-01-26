@@ -42,6 +42,8 @@ db.sequelize = sequelize
 
 db.Users = require('./userModel')(sequelize, DataTypes)
 db.Accounts = require('./accountModel')(sequelize, DataTypes)
+db.Investments = require('./investmentModel')(sequelize, DataTypes)
+
 
 
 db.sequelize.sync({ force: false }).then(() => {
@@ -52,5 +54,8 @@ db.sequelize.sync({ force: false }).then(() => {
 
 db.Accounts.belongsTo(db.Users);
 db.Users.hasMany(db.Accounts);
+
+db.Accounts.hasMany(db.Investments);
+db.Investments.belongsTo(db.Accounts);
 
 module.exports = db
