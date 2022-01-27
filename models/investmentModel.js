@@ -21,11 +21,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         expenseRatio: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(3, 2),
             allowNull: false
         },
         nAV: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(4, 2),
             allowNull: false
         },
         inceptionDate: {
