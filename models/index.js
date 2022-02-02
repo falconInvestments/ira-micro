@@ -46,7 +46,7 @@ db.Investments = require('./investmentModel')(sequelize, DataTypes)
 
 
 
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync({ force: false }).then(() => {
     console.log('DB synced with sequelize')
 }).catch((error) => {
     console.log('Error syncing the DB to sequelize' + error)
