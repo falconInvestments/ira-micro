@@ -1,9 +1,11 @@
+require('dotenv').config();
+
 const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
 const app = express()
-const port = 5280
+const port = process.env.PORT || 5200
 app.use(express.json())
 app.use(cors())
 

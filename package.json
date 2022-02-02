@@ -4,7 +4,7 @@
   "description": "A DB setup with sequelize for IRA accounts microservice",
   "main": "server.js",
   "scripts": {
-    "test": "mocha --timeout 10000",
+    "test": " nyc --reporter=text mocha --timeout 10000",
     "start": "node server.js"
   },
   "author": "James Morical",
@@ -22,6 +22,7 @@
     "chai": "^4.3.6",
     "chai-http": "^4.3.0",
     "dotenv": "^15.0.0",
-    "mocha": "^9.2.0"
+    "mocha": "^9.2.0",
+    "nyc": "^15.1.0"
   }
 }
