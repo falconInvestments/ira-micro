@@ -21,7 +21,7 @@ let sequelize = null;
             database: process.env.DATABASE,
             username: process.env.USER,
             password: process.env.PASSWORD,
-            dialect: dbConfig.dialect,
+            dialect: 'postgres',
             host: process.env.HOST,
         })
     }
