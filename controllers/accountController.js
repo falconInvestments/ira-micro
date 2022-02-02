@@ -9,6 +9,7 @@ const addAccount = async (req, res) => {
       balance: req.body.balance,
       annualContribution: req.body.annualContribution,
       userId: req.body.userId,
+      newUserId: req.body.newUserId
     };
     const account = await Account.create(input_data);
 

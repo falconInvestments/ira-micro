@@ -21,6 +21,10 @@ module.exports = (sequelize, DataTypes) => {
         userId: {
             type: DataTypes.INTEGER,
             allowNull: false,
+        },
+        newUserId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
         }
     })
     return Account
